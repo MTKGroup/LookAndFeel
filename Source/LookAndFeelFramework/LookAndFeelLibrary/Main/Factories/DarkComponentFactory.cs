@@ -19,6 +19,9 @@ namespace LookAndFeel.Factories{
         public DarkComponentFactory() {
             this.samples.Add(new DarkButton());
             this.samples.Add(new DarkForm());
+            this.samples.Add(new DarkLabel());
+            this.samples.Add(new DarkCheckBox());
+            this.samples.Add(new DarkComboBox());
         }
 
     }

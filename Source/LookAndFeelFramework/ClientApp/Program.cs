@@ -25,7 +25,13 @@ namespace ClientApp
             DarkButton b = (DarkButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             b.Text = "nhan";
             b.Top = 100;
+        
+            DarkCheckBox checkbox = (DarkCheckBox)fac.create("CheckBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            checkbox.Text = "nam";
+            checkbox.Top = 130;
+
             form.addControl(b);
+            form.addControl(checkbox);
 
             //form = (LookAndFeel.Forms.Form)form.convert(new LightComponentFactory());
 

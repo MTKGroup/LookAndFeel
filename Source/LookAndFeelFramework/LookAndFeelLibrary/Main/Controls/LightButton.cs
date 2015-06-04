@@ -9,7 +9,7 @@ namespace LookAndFeel.Controls{
     /**
      * 
      */
-    public class LightButton : Button {
+    public class LightButton : Button, IControl {
 
         /**
          * 

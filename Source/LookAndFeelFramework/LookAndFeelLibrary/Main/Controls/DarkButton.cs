@@ -20,7 +20,7 @@ namespace LookAndFeel.Controls
          */
         public DarkButton()
         {
-            this.BackColor = Color.FromArgb(99,161,118);
+            this.BackColor = Color.FromArgb(34, 49, 63);
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             
         }
@@ -44,7 +44,7 @@ namespace LookAndFeel.Controls
 
             //Draw border
             Brush b = new SolidBrush(this.BackColor);
-            e.Graphics.DrawRectangle(new Pen(Color.FromArgb(143,140,137), 2), 0, 0, this.Width, this.Height);
+            e.Graphics.DrawRectangle(new Pen(Color.FromArgb(51, 110, 123), 2), 0, 0, this.Width, this.Height);
 
         }
 
@@ -59,11 +59,11 @@ namespace LookAndFeel.Controls
 
                 if (isHovered && !isPressed && Enabled)
                 {
-                    backColor = Color.FromArgb(102, 39, 55);
+                    backColor = Color.FromArgb(103, 128, 159);
                 }
                 else if (isHovered && isPressed && Enabled)
                 {
-                    backColor = Color.FromArgb(81, 31, 44);
+                    backColor = Color.FromArgb(44, 62, 80);
                 }
                 else
                 {

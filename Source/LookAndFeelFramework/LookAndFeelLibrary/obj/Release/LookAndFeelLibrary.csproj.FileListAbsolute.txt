@@ -1,0 +1,8 @@
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Release\LookAndFeelLibrary.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Release\LookAndFeelLibrary.pdb
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Release\MetroFramework.Design.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Release\MetroFramework.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Release\MetroFramework.Fonts.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Release\LookAndFeelLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Release\LookAndFeelLibrary.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Release\LookAndFeelLibrary.pdb

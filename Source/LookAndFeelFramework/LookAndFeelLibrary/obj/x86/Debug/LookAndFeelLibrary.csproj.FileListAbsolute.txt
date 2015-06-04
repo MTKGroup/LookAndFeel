@@ -1,0 +1,7 @@
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\x86\Debug\LookAndFeelLibrary.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\x86\Debug\LookAndFeelLibrary.pdb
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\x86\Debug\MetroFramework.Design.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\x86\Debug\MetroFramework.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\x86\Debug\MetroFramework.Fonts.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\x86\Debug\LookAndFeelLibrary.dll
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\x86\Debug\LookAndFeelLibrary.pdb
