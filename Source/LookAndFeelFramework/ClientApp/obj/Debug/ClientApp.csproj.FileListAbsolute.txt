@@ -10,14 +10,3 @@ C:\Users\nhanbach\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\Clien
 C:\Users\nhanbach\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.exe
 C:\Users\nhanbach\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.pdb
 C:\Users\nhanbach\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.FormMain.resources
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\Debug\ClientApp.exe.config
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\Debug\ClientApp.exe
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\Debug\ClientApp.pdb
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\Debug\LookAndFeelLibrary.dll
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\Debug\LookAndFeelLibrary.pdb
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.csprojResolveAssemblyReference.cache
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.FormMain.resources
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.Cache
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.exe
-C:\Users\cop\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Debug\ClientApp.pdb
