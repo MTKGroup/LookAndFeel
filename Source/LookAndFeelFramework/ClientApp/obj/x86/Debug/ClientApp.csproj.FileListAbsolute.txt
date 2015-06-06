@@ -2,9 +2,8 @@ C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\
 C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\x86\Debug\ClientApp.FormMain.resources
 C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\x86\Debug\ClientApp.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\x86\Debug\ClientApp.csproj.GenerateResource.Cache
-C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\x86\Debug\ClientApp.exe.config
 C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\x86\Debug\ClientApp.exe
-C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\x86\Debug\ClientApp.pdb
+C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\x86\Debug\ClientApp.exe.config
 C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\x86\Debug\LookAndFeelLibrary.dll
 C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\x86\Debug\MetroFramework.Design.dll
 C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\x86\Debug\MetroFramework.dll

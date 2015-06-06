@@ -16,7 +16,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LookAndFeel.Controls.ComboBox" Collapsed="true">
-    <Position X="9" Y="7.5" Width="1.5" />
+    <Position X="10.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\ComboBox.cs</FileName>
@@ -40,7 +40,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LookAndFeel.Controls.DarkComboBox" Collapsed="true">
-    <Position X="9" Y="9" Width="1.5" />
+    <Position X="10.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkComboBox.cs</FileName>
@@ -64,9 +64,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LookAndFeel.Controls.DarkTextBox" Collapsed="true">
-    <Position X="11.5" Y="9" Width="1.5" />
+    <Position X="8.5" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkTextBox.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -104,7 +104,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="LookAndFeel.Controls.TextBox" Collapsed="true">
-    <Position X="11.5" Y="7.5" Width="1.5" />
+    <Position X="8.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\TextBox.cs</FileName>

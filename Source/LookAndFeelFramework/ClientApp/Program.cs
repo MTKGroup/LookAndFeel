@@ -24,14 +24,21 @@ namespace ClientApp
             var form = (LookAndFeel.Forms.Form)fac.create("Form", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             DarkButton b = (DarkButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             b.Text = "nhan";
-            b.Top = 100;
-        
+            b.Top = 50;
+
+
             DarkCheckBox checkbox = (DarkCheckBox)fac.create("CheckBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             checkbox.Text = "nam";
-            checkbox.Top = 130;
+            checkbox.Top = 80;
+
+            DarkTextBox textbox = (DarkTextBox)fac.create("TextBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            textbox.Text = "vu nam";
+            textbox.Top = 130;
 
             form.addControl(b);
             form.addControl(checkbox);
+            form.addControl(textbox);
+
 
             //form = (LookAndFeel.Forms.Form)form.convert(new LightComponentFactory());
 

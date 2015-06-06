@@ -32,8 +32,8 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            e.Graphics.FillRectangle(Brushes.DarkGray, this.Left + 20, this.Top, this.Width - 20, this.Height);
-            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 18, 7), Color.Red);
+            e.Graphics.FillRectangle(Brushes.White, 19, 0, this.Width - 19, this.Height);
+            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 18, 7), Color.DarkGray);
         }
     }
 }
