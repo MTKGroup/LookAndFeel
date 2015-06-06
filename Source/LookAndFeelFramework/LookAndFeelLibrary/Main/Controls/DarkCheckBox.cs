@@ -32,8 +32,7 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            //Font font = new System.Drawing.Font("Arial", 9);
-            //e.Graphics.Clear(Color.Transparent);
+            e.Graphics.FillRectangle(Brushes.DarkGray, this.Left + 20, this.Top, this.Width - 20, this.Height);
             System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 18, 7), Color.Red);
         }
     }

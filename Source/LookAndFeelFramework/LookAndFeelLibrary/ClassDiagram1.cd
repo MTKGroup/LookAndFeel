@@ -1,78 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LookAndFeelLibrary.Main.Components.ComponentInfo" Collapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
+    <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAQAQAAAAAAAAACAAAAAAABgAAAAAAA=</HashCode>
       <FileName>Main\Components\ComponentInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LookAndFeel.Controls.Button" Collapsed="true">
-    <Position X="1.75" Y="6.5" Width="1.5" />
+    <Position X="6.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAgAAAAABAAAAAQQAAAAAAIAAAGAACAAA=</HashCode>
       <FileName>Main\Controls\Button.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="LookAndFeel.Controls.DarkButton" Collapsed="true">
-    <Position X="0.5" Y="8" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Main\Controls\DarkButton.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="LookAndFeel.Controls.DarkLabel" Collapsed="true">
-    <Position X="0.75" Y="10.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Main\Controls\DarkLabel.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="LookAndFeel.Controls.GroupBox" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Main\Controls\GroupBox.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="LookAndFeel.Controls.Label" Collapsed="true">
-    <Position X="1.75" Y="9.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Main\Controls\Label.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="LookAndFeel.Controls.LightButton" Collapsed="true">
-    <Position X="2.75" Y="8" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Main\Controls\LightButton.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="LookAndFeel.Controls.Panel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.25" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Main\Controls\Panel.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="LookAndFeel.Controls.TextBox" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.5" Y="9" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Main\Controls\TextBox.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="LookAndFeel.Controls.ComboBox" Collapsed="true">
-    <Position X="5.5" Y="9" Width="1.5" />
+    <Position X="9" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\ComboBox.cs</FileName>
@@ -80,26 +24,90 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LookAndFeel.Controls.CheckBox" Collapsed="true">
-    <Position X="7.75" Y="9.25" Width="1.5" />
+    <Position X="6.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\CheckBox.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="LookAndFeel.Controls.DarkComboBox">
-    <Position X="4" Y="10.25" Width="1.5" />
+  <Class Name="LookAndFeel.Controls.DarkButton" Collapsed="true">
+    <Position X="5.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Main\Controls\DarkButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.DarkComboBox" Collapsed="true">
+    <Position X="9" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkComboBox.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="LookAndFeel.Controls.DarkCheckBox">
-    <Position X="6.75" Y="10.5" Width="1.5" />
+  <Class Name="LookAndFeel.Controls.DarkCheckBox" Collapsed="true">
+    <Position X="6.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkCheckBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.DarkLabel" Collapsed="true">
+    <Position X="3.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Main\Controls\DarkLabel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.DarkTextBox" Collapsed="true">
+    <Position X="11.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main\Controls\DarkTextBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.GroupBox" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Main\Controls\GroupBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.Label" Collapsed="true">
+    <Position X="3.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Main\Controls\Label.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.LightButton" Collapsed="true">
+    <Position X="7.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Main\Controls\LightButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.Panel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Main\Controls\Panel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LookAndFeel.Controls.TextBox" Collapsed="true">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Main\Controls\TextBox.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -147,21 +155,21 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="LookAndFeel.Components.IComponent" Collapsed="true">
-    <Position X="11.5" Y="3.75" Width="1.5" />
+    <Position X="5.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Main\Components\IComponent.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LookAndFeel.Controls.IContainerControl" Collapsed="true">
-    <Position X="11.5" Y="6.5" Width="1.5" />
+    <Position X="5.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Main\Controls\IContainerControl.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LookAndFeel.Controls.IControl" Collapsed="true">
-    <Position X="11.5" Y="5" Width="1.5" />
+    <Position X="5.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Main\Controls\IControl.cs</FileName>
