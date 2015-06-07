@@ -14,7 +14,7 @@ namespace LookAndFeel.Controls
     {
         public DarkComboBox()
         {
-            
+            this.ForeColor = Color.DarkGray;
         }
 
         public override IComponent clone(ComponentInfo info)
@@ -31,9 +31,7 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            //Font font = new System.Drawing.Font("Arial", 9);
-            //e.Graphics.Clear(Color.Transparent);
-            //e.Graphics.DrawString(this.Text, font, Brushes.DarkGray, 0, 0);
+            e.Graphics.DrawRectangle(Pens.DarkGray, 0, 0, this.Width, this.Height);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace LookAndFeel.Controls
         public DarkTextBox()
         {
             this.Width = 100;
+            this.ForeColor = Color.DarkGray;
         }
 
         public override IComponent clone(ComponentInfo info)

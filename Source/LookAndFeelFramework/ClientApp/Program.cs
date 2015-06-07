@@ -35,9 +35,18 @@ namespace ClientApp
             textbox.Text = "vu nam";
             textbox.Top = 130;
 
+            DarkComboBox combobox = (DarkComboBox)fac.create("ComboBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            combobox.Text = "nam vu";
+            combobox.Top = 180;
+            combobox.Items.Add("Vietnam");
+            combobox.Items.Add("Japan");
+            combobox.Items.Add("USA");
+
+
             form.addControl(b);
             form.addControl(checkbox);
             form.addControl(textbox);
+            form.addControl(combobox);
 
 
             //form = (LookAndFeel.Forms.Form)form.convert(new LightComponentFactory());
