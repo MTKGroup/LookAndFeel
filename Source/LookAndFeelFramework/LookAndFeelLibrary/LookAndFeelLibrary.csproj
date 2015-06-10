@@ -55,7 +55,25 @@
     <Compile Include="Main\Controls\Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Main\Controls\CheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Main\Controls\DarkButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\DarkCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\DarkComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\DarkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\DarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Main\Controls\GroupBox.cs">
@@ -63,7 +81,22 @@
     </Compile>
     <Compile Include="Main\Controls\IContainerControl.cs" />
     <Compile Include="Main\Controls\IControl.cs" />
+    <Compile Include="Main\Controls\Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Main\Controls\LightButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Main\Controls\Panel.cs">
@@ -88,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

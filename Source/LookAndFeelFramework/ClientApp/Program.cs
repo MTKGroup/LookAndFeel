@@ -18,14 +18,26 @@ namespace ClientApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            ComponentFactory fac = new DarkComponentFactory();
+
+            ComponentFactory fac = new LightComponentFactory();
 
             var form = (LookAndFeel.Forms.Form)fac.create("Form", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            DarkButton b = (DarkButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            LightButton b = (LightButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             b.Text = "nhan";
             b.Top = 100;
             form.addControl(b);
+
+            LightTextBox textbox = (LightTextBox)fac.create("TextBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            textbox.Text = "text";
+            textbox.Top = 200;
+            form.addControl(textbox);
+
+            LightLabel label = (LightLabel)fac.create("Label", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            label.Text = "testlabel1";
+            label.Width = 60;
+            label.Height = 20;
+            label.Top = 150;
+            form.addControl(label);
 
             //form = (LookAndFeel.Forms.Form)form.convert(new LightComponentFactory());
 

@@ -11,7 +11,7 @@ namespace LookAndFeel.Controls{
     /**
      * 
      */
-    public class TextBox : MetroFramework.Controls.MetroTextBox, IControl {
+    public abstract class TextBox : MetroFramework.Controls.MetroTextBox, IControl {
 
         /**
          * 
@@ -24,7 +24,7 @@ namespace LookAndFeel.Controls{
          */
         public String getType() {
             // TODO implement here
-            return null;
+            return "TextBox";
         }
 
         /**
@@ -39,11 +39,7 @@ namespace LookAndFeel.Controls{
         /**
          * @return
          */
-        public IComponent clone(ComponentInfo info)
-        {
-            // TODO implement here
-            return null;
-        }
+        public abstract IComponent clone(ComponentInfo info);
 
     }
 }
