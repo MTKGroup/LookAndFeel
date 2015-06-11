@@ -105,6 +105,18 @@
     <Compile Include="Main\Controls\LightButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Main\Controls\LightCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Main\Controls\Panel.cs">
       <SubType>Component</SubType>
     </Compile>

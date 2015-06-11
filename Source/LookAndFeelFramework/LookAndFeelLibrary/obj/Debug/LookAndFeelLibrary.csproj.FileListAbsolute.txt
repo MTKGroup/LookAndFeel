@@ -22,3 +22,11 @@ C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndF
 C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Debug\LookAndFeelLibrary.csprojResolveAssemblyReference.cache
 C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Debug\LookAndFeelLibrary.dll
 C:\Users\NamVu\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Debug\LookAndFeelLibrary.pdb
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Debug\LookAndFeelLibrary.dll
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Debug\LookAndFeelLibrary.pdb
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Debug\MetroFramework.Design.dll
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Debug\MetroFramework.dll
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Debug\LookAndFeelLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Debug\LookAndFeelLibrary.dll
+C:\Users\Hoang\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\LookAndFeelLibrary\obj\Debug\LookAndFeelLibrary.pdb
