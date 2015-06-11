@@ -19,24 +19,24 @@ namespace ClientApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            ComponentFactory fac = new DarkComponentFactory();
+            ComponentFactory fac = new LightComponentFactory();
 
             var form = (LookAndFeel.Forms.Form)fac.create("Form", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            DarkButton b = (DarkButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            LightButton b = (LightButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             b.Text = "nhan";
             b.Top = 50;
 
 
-            DarkCheckBox checkbox = (DarkCheckBox)fac.create("CheckBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            checkbox.Text = "nam";
+            LightCheckBox checkbox = (LightCheckBox)fac.create("CheckBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            checkbox.Text = "nam gay";
             checkbox.Top = 80;
 
-            DarkTextBox textbox = (DarkTextBox)fac.create("TextBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            textbox.Text = "vu nam";
+            LightTextBox textbox = (LightTextBox)fac.create("TextBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            textbox.Text = "vu nam gay";
             textbox.Top = 130;
 
-            DarkComboBox combobox = (DarkComboBox)fac.create("ComboBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            combobox.Text = "nam vu";
+            LightComboBox combobox = (LightComboBox)fac.create("ComboBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            combobox.Text = "nam vu gay";
             combobox.Top = 180;
             combobox.Items.Add("Vietnam");
             combobox.Items.Add("Japan");
