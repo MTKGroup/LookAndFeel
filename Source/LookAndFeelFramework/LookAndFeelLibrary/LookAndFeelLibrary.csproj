@@ -80,6 +80,9 @@
     <Compile Include="Main\Controls\DarkComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Main\Controls\DarkGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Main\Controls\DarkLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -102,9 +105,6 @@
     </Compile>
     <Compile Include="Main\Controls\IContainerControl.cs" />
     <Compile Include="Main\Controls\IControl.cs" />
-    <Compile Include="Main\Controls\LightButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Main\Controls\Panel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -113,7 +113,6 @@
     </Compile>
     <Compile Include="Main\Factories\ComponentFactory.cs" />
     <Compile Include="Main\Factories\DarkComponentFactory.cs" />
-    <Compile Include="Main\Factories\LightComponentFactory.cs" />
     <Compile Include="Main\Forms\DarkForm.cs">
       <SubType>Form</SubType>
     </Compile>

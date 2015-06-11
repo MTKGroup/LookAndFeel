@@ -12,11 +12,24 @@ namespace LookAndFeel.Controls{
      * 
      */
     public abstract class TextBox : MetroFramework.Controls.MetroTextBox, IControl {
-
+        protected List<ClickHandler> clickHandlers;
         /**
          * 
          */
         public TextBox() {
+            this.clickHandlers = new List<ClickHandler>();
+        }
+
+        public event ClickHandler ClickListener
+        {
+            add
+            {
+                this.clickHandlers.Add(value);
+            }
+            remove
+            {
+                this.clickHandlers.Remove(value);
+            }
         }
 
         /**

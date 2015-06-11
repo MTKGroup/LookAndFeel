@@ -11,7 +11,7 @@ namespace LookAndFeel.Controls
     /**
      * 
      */
-    public class DarkButton : Button, IControl
+    public class DarkButton : Button
     {
 
 
@@ -36,7 +36,15 @@ namespace LookAndFeel.Controls
 
         }
 
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
 
+            foreach (var handler in this.clickHandlers)
+            {
+                handler(this);
+            }
+        }
 
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {

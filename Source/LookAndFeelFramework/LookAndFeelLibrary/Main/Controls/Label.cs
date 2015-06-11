@@ -11,7 +11,22 @@ namespace LookAndFeel.Controls
 {
     public abstract class Label : MetroFramework.Controls.MetroLabel, IControl
     {
+        protected List<ClickHandler> clickHandlers;
+
         public Label() {
+            this.clickHandlers = new List<ClickHandler>();
+        }
+
+        public event ClickHandler ClickListener
+        {
+            add
+            {
+                this.clickHandlers.Add(value);
+            }
+            remove
+            {
+                this.clickHandlers.Remove(value);
+            }
         }
 
         /**

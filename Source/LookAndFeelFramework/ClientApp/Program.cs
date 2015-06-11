@@ -1,5 +1,6 @@
 ﻿using LookAndFeel.Controls;
 using LookAndFeel.Factories;
+using LookAndFeelLibrary.Main.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,32 +22,20 @@ namespace ClientApp
             
             ComponentFactory fac = new DarkComponentFactory();
 
-            var form = (LookAndFeel.Forms.Form)fac.create("Form", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            DarkButton b = (DarkButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            b.Text = "nhan";
-            b.Top = 50;
-
-
-            DarkCheckBox checkbox = (DarkCheckBox)fac.create("CheckBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            checkbox.Text = "nam";
-            checkbox.Top = 80;
-
-            DarkTextBox textbox = (DarkTextBox)fac.create("TextBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
+            var form = (LookAndFeel.Forms.Form)fac.create("Form", new ComponentInfo());
+            
+            DarkTextBox textbox = (DarkTextBox)fac.create("TextBox", new ComponentInfo());
             textbox.Text = "vu nam";
-            textbox.Top = 130;
+            textbox.Top = 20;
+            textbox.Left = 20;
 
-            DarkComboBox combobox = (DarkComboBox)fac.create("ComboBox", new LookAndFeelLibrary.Main.Components.ComponentInfo());
-            combobox.Text = "nam vu";
-            combobox.Top = 180;
-            combobox.Items.Add("Vietnam");
-            combobox.Items.Add("Japan");
-            combobox.Items.Add("USA");
+            DarkGroupBox groupBox = (DarkGroupBox)fac.create("GroupBox", new ComponentInfo());
+            groupBox.Text = "Nam Vu";
+            groupBox.Top = 80;
 
-
-            form.addControl(b);
-            form.addControl(checkbox);
-            form.addControl(textbox);
-            form.addControl(combobox);
+            //form.addControl(textbox);
+            groupBox.addControl(textbox);
+            form.addControl(groupBox);
 
 
             //form = (LookAndFeel.Forms.Form)form.convert(new LightComponentFactory());
@@ -54,5 +43,7 @@ namespace ClientApp
             Application.Run(form);
 
         }
+
+        
     }
 }

@@ -14,10 +14,13 @@ namespace LookAndFeel.Controls{
     public abstract class Button : MetroFramework.Controls.MetroButton, IControl {
         protected bool isHovered;
         protected bool isPressed;
+        protected List<ClickHandler> clickHandlers;
+
         /**
          * 
          */
         public Button() {
+            this.clickHandlers = new List<ClickHandler>();
         }
 
         /**
@@ -40,6 +43,18 @@ namespace LookAndFeel.Controls{
             var info = new ComponentInfo();
             return f.create(this.getType(), info);    
         }
+
+        public event ClickHandler ClickListener 
+        { 
+            add{
+                this.clickHandlers.Add(value);
+            }
+            remove {
+                this.clickHandlers.Remove(value);
+            }
+        }
+
+        
 
         protected override void OnMouseDown(System.Windows.Forms.MouseEventArgs e)
         {

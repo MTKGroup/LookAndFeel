@@ -23,6 +23,7 @@ namespace LookAndFeel.Factories{
             this.samples.Add(new DarkCheckBox());
             this.samples.Add(new DarkComboBox());
             this.samples.Add(new DarkTextBox());
+            this.samples.Add(new DarkGroupBox());
         }
 
     }

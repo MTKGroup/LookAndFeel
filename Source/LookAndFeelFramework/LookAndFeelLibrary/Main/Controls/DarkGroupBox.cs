@@ -1,5 +1,4 @@
 ﻿using LookAndFeel.Components;
-using LookAndFeel.Controls;
 using LookAndFeelLibrary.Main.Components;
 using System;
 using System.Collections.Generic;
@@ -10,16 +9,14 @@ using System.Threading.Tasks;
 
 namespace LookAndFeel.Controls
 {
-    public class DarkComboBox : ComboBox
+    public class DarkGroupBox : GroupBox
     {
-        public DarkComboBox()
-        {
-            this.ForeColor = Color.DarkGray;
+        public DarkGroupBox(){
         }
 
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new DarkComboBox();
+            var newControl = new DarkGroupBox();
 
             //set info for newControl
             //....
@@ -41,9 +38,14 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            Pen pen = new Pen(Color.DarkGray, 4);
+            Pen pen = new Pen(Color.DarkGray, .5f);
 
-            e.Graphics.DrawRectangle(pen, 0, 0, this.Width, this.Height);
+            e.Graphics.Clear(Color.White);
+
+            e.Graphics.DrawRectangle(pen, 0, 0, this.Width-20, this.Height-20);
+            e.Graphics.FillRectangle(Brushes.DarkGray, 0, 0, this.Width - 20, (int)(this.Height * 0.2));
+            Font font = new Font("Helvetica", 10, FontStyle.Regular);
+            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, font, new Point(2, 2), Color.White);
         }
     }
 }
