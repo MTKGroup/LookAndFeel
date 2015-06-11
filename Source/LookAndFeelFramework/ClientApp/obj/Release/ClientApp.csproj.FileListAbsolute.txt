@@ -1,0 +1,5 @@
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\bin\Release\ClientApp.exe.config
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Release\ClientApp.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Release\ClientApp.FormMain.resources
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Release\ClientApp.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\LookAndFeel\Source\LookAndFeelFramework\ClientApp\obj\Release\ClientApp.csproj.GenerateResource.Cache
