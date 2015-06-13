@@ -11,12 +11,23 @@ namespace LookAndFeel.Controls
 {
     public class DarkGroupBox : GroupBox
     {
+        private ComponentInfo info;
+
         public DarkGroupBox(){
+        }
+
+        public DarkGroupBox(ComponentInfo info)
+        {
+            // TODO: Complete member initialization
+            this.info.x = info.x;
+            this.info.y = info.y;
+            this.info.width = info.width;
+            this.info.height = info.height;
         }
 
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new DarkGroupBox();
+            var newControl = new DarkGroupBox(info);
 
             //set info for newControl
             //....

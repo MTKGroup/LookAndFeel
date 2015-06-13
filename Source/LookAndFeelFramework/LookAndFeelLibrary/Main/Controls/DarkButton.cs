@@ -1,4 +1,5 @@
 
+using LookAndFeel.Components;
 using LookAndFeelLibrary.Main.Components;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace LookAndFeel.Controls
      */
     public class DarkButton : Button
     {
+        private ComponentInfo info;
+
 
 
         /**
@@ -25,9 +28,21 @@ namespace LookAndFeel.Controls
             
         }
 
-        public override Components.IComponent clone(ComponentInfo info)
+        public DarkButton(ComponentInfo info)
         {
-            var newControl = new DarkButton();
+            // TODO: Complete member initialization
+            this.info.x = info.x;
+            this.info.y = info.y;
+            this.info.width = info.width;
+            this.info.height = info.height;
+
+            this.BackColor = Color.FromArgb(34, 49, 63);
+            this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        }
+
+        public override IComponent clone(ComponentInfo info)
+        {
+            var newControl = new DarkButton(info);
 
             //set info for newControl
             //....

@@ -12,14 +12,24 @@ namespace LookAndFeel.Controls
 {
     public class DarkComboBox : ComboBox
     {
+        private ComponentInfo info;
+
         public DarkComboBox()
         {
-            this.ForeColor = Color.DarkGray;
+        }
+
+        public DarkComboBox(ComponentInfo info)
+        {
+            // TODO: Complete member initialization
+            this.info.x = info.x;
+            this.info.y = info.y;
+            this.info.width = info.width;
+            this.info.height = info.height;
         }
 
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new DarkComboBox();
+            var newControl = new DarkComboBox(info);
 
             //set info for newControl
             //....

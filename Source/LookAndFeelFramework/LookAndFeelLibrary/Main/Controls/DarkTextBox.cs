@@ -11,15 +11,29 @@ namespace LookAndFeel.Controls
 {
     public class DarkTextBox : TextBox
     {
+        private ComponentInfo info;
+
         public DarkTextBox()
         {
             this.Width = 100;
             this.ForeColor = Color.DarkGray;
         }
 
+        public DarkTextBox(ComponentInfo info)
+        {
+            // TODO: Complete member initialization
+            this.info.x = info.x;
+            this.info.y = info.y;
+            this.info.width = info.width;
+            this.info.height = info.height;
+
+            this.Width = 100;
+            this.ForeColor = Color.DarkGray;
+        }
+
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new DarkTextBox();
+            var newControl = new DarkTextBox(info);
 
             //set info for newControl
             //....

@@ -11,14 +11,25 @@ namespace LookAndFeel.Controls
 {
     public class DarkLabel : Label
     {
+        private ComponentInfo info;
+
         public DarkLabel()
         {
             
         }
 
+        public DarkLabel(ComponentInfo info)
+        {
+            // TODO: Complete member initialization
+            this.info.x = info.x;
+            this.info.y = info.y;
+            this.info.width = info.width;
+            this.info.height = info.height;
+        }
+
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new DarkLabel();
+            var newControl = new DarkLabel(info);
 
             //set info for newControl
             //....

@@ -12,15 +12,26 @@ namespace LookAndFeel.Controls
 {
     public class DarkCheckBox : CheckBox
     {
+        private ComponentInfo info;
+
 
         public DarkCheckBox()
         {
             
         }
 
+        public DarkCheckBox(ComponentInfo info)
+        {
+            // TODO: Complete member initialization
+            this.info.x = info.x;
+            this.info.y = info.y;
+            this.info.width = info.width;
+            this.info.height = info.height;
+        }
+
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new DarkCheckBox();
+            var newControl = new DarkCheckBox(info);
 
             //set info for newControl
             //....
