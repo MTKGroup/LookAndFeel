@@ -9,16 +9,22 @@ using System.Threading.Tasks;
 
 namespace LookAndFeel.Controls
 {
+<<<<<<< HEAD
     public class DarkTextBox : TextBox
     {
         private ComponentInfo info;
 
+=======
+    public class DarkTextBox : TextBox, IControl
+    {
+>>>>>>> origin/nhhoang_new
         public DarkTextBox()
         {
             this.Width = 100;
             this.ForeColor = Color.DarkGray;
         }
 
+<<<<<<< HEAD
         public DarkTextBox(ComponentInfo info)
         {
             // TODO: Complete member initialization
@@ -35,6 +41,11 @@ namespace LookAndFeel.Controls
         public override IComponent clone(ComponentInfo info)
         {
             var newControl = new DarkTextBox(info);
+=======
+        public override IComponent clone(ComponentInfo info)
+        {
+            var newControl = new DarkTextBox();
+>>>>>>> origin/nhhoang_new
 
             //set info for newControl
             //....
@@ -42,6 +53,7 @@ namespace LookAndFeel.Controls
             return newControl;
         }
 
+<<<<<<< HEAD
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
@@ -52,11 +64,14 @@ namespace LookAndFeel.Controls
             }
         }
 
+=======
+>>>>>>> origin/nhhoang_new
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
 
             
+<<<<<<< HEAD
 
             Pen pen = new Pen(Color.DarkGray, 4);
             e.Graphics.DrawRectangle(pen, 0, 0, this.Width, this.Height);
@@ -79,6 +94,16 @@ namespace LookAndFeel.Controls
         {
             base.OnForeColorChanged(e);
             this.ForeColor = Color.DarkGray;
+=======
+            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 18, 7), Color.Blue);
+        }
+
+        protected override void OnPaintBackground(System.Windows.Forms.PaintEventArgs e)
+        {
+            base.OnPaintBackground(e);
+            this.BackColor = Color.White;
+            e.Graphics.FillRectangle(Brushes.DarkGray, 0, 0, this.Width, this.Height);
+>>>>>>> origin/nhhoang_new
         }
     }
 }

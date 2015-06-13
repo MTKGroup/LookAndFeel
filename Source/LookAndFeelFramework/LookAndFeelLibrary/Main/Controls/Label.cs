@@ -11,6 +11,7 @@ namespace LookAndFeel.Controls
 {
     public abstract class Label : MetroFramework.Controls.MetroLabel, IControl
     {
+<<<<<<< HEAD
         protected List<ClickHandler> clickHandlers;
 
         public Label() {
@@ -27,6 +28,9 @@ namespace LookAndFeel.Controls
             {
                 this.clickHandlers.Remove(value);
             }
+=======
+        public Label() {
+>>>>>>> origin/nhhoang_new
         }
 
         /**

@@ -40,6 +40,19 @@ namespace LookAndFeel.Forms{
         }
 
 
+<<<<<<< HEAD
+=======
+        protected override void OnPaintBackground(System.Windows.Forms.PaintEventArgs e)
+        {
+            base.OnPaintBackground(e);
+
+        }
+
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        {
+            base.OnPaint(e);
+        }
+>>>>>>> origin/nhhoang_new
 
         
 

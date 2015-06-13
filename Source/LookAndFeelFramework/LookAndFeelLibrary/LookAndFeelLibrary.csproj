@@ -80,9 +80,12 @@
     <Compile Include="Main\Controls\DarkComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Main\Controls\DarkGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
+=======
+>>>>>>> origin/nhhoang_new
     <Compile Include="Main\Controls\DarkLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -105,6 +108,24 @@
     </Compile>
     <Compile Include="Main\Controls\IContainerControl.cs" />
     <Compile Include="Main\Controls\IControl.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Main\Controls\LightButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\LightTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+>>>>>>> origin/nhhoang_new
     <Compile Include="Main\Controls\Panel.cs">
       <SubType>Component</SubType>
     </Compile>
