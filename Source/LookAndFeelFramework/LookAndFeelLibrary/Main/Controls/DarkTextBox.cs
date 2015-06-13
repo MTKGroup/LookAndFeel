@@ -22,6 +22,7 @@ namespace LookAndFeel.Controls
         public DarkTextBox(ComponentInfo info)
         {
             // TODO: Complete member initialization
+            this.info = new ComponentInfo();
             this.info.x = info.x;
             this.info.y = info.y;
             this.info.width = info.width;
@@ -57,7 +58,6 @@ namespace LookAndFeel.Controls
 
             
 
-            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 18, 7), Color.Blue);
             Pen pen = new Pen(Color.DarkGray, 4);
             e.Graphics.DrawRectangle(pen, 0, 0, this.Width, this.Height);
         }

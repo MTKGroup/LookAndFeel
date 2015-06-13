@@ -26,7 +26,7 @@ namespace ClientApp
             
             DarkTextBox textbox = (DarkTextBox)fac.create("TextBox", new ComponentInfo());
             textbox.Text = "vu nam";
-            textbox.Top = 20;
+            textbox.Top = 40;
             textbox.Left = 20;
 
             DarkGroupBox groupBox = (DarkGroupBox)fac.create("GroupBox", new ComponentInfo());
