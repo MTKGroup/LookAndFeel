@@ -12,13 +12,25 @@ namespace LookAndFeel.Controls{
      * 
      */
     public class Panel : MetroFramework.Controls.MetroPanel, IControl {
-
+        protected List<ClickHandler> clickHandlers;
         /**
          * 
          */
         public Panel() {
+            this.clickHandlers = new List<ClickHandler>();
         }
 
+        public event ClickHandler ClickListener
+        {
+            add
+            {
+                this.clickHandlers.Add(value);
+            }
+            remove
+            {
+                this.clickHandlers.Remove(value);
+            }
+        }
 
         /**
          * @return

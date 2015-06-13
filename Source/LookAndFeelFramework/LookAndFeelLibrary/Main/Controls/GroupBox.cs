@@ -12,11 +12,26 @@ namespace LookAndFeel.Controls{
      * 
      */
     public abstract class GroupBox : System.Windows.Forms.GroupBox , IControl {
-
+        protected HashSet<IControl> controls;
+        protected List<ClickHandler> clickHandlers;
         /**
          * 
          */
         public GroupBox() {
+            this.controls = new HashSet<IControl>();
+            this.clickHandlers = new List<ClickHandler>();
+        }
+
+        public event ClickHandler ClickListener
+        {
+            add
+            {
+                this.clickHandlers.Add(value);
+            }
+            remove
+            {
+                this.clickHandlers.Remove(value);
+            }
         }
 
         /**
@@ -38,6 +53,12 @@ namespace LookAndFeel.Controls{
          */
         public String getType() {
             return "GroupBox";
+        }
+
+        public void addControl(IControl component)
+        {
+            this.controls.Add(component);
+            this.Controls.Add((System.Windows.Forms.Control)component);
         }
 
     }
