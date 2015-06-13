@@ -22,22 +22,7 @@ namespace ClientApp
             
             ComponentFactory fac = new LightComponentFactory();
 
-<<<<<<< HEAD
-            var form = (LookAndFeel.Forms.Form)fac.create("Form", new ComponentInfo());
-            
-            DarkTextBox textbox = (DarkTextBox)fac.create("TextBox", new ComponentInfo());
-            textbox.Text = "vu nam";
-            textbox.Top = 40;
-            textbox.Left = 20;
 
-            DarkGroupBox groupBox = (DarkGroupBox)fac.create("GroupBox", new ComponentInfo());
-            groupBox.Text = "Nam Vu";
-            groupBox.Top = 80;
-
-            //form.addControl(textbox);
-            groupBox.addControl(textbox);
-            form.addControl(groupBox);
-=======
             var form = (LookAndFeel.Forms.Form)fac.create("Form", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             LightButton b = (LightButton)fac.create("Button", new LookAndFeelLibrary.Main.Components.ComponentInfo());
             b.Text = "nhan";
@@ -64,11 +49,10 @@ namespace ClientApp
             form.addControl(checkbox);
             form.addControl(textbox);
             form.addControl(combobox);
->>>>>>> origin/nhhoang_new
 
 
             //form = (LookAndFeel.Forms.Form)form.convert(new LightComponentFactory());
-
+            //form = (LookAndFeel.Forms.Form)form.convert(new DarkComponentFactory());
             Application.Run(form);
 
         }

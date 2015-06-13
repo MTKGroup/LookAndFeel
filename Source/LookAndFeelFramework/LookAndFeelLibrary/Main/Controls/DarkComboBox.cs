@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace LookAndFeel.Controls
 {
-<<<<<<< HEAD
     public class DarkComboBox : ComboBox
     {
         private ComponentInfo info;
@@ -22,26 +21,18 @@ namespace LookAndFeel.Controls
         public DarkComboBox(ComponentInfo info)
         {
             // TODO: Complete member initialization
+            this.info = new ComponentInfo();
             this.info.x = info.x;
             this.info.y = info.y;
             this.info.width = info.width;
             this.info.height = info.height;
-=======
-    public class DarkComboBox : ComboBox, IControl
-    {
-        public DarkComboBox()
-        {
-            this.ForeColor = Color.DarkGray;
->>>>>>> origin/nhhoang_new
+
         }
 
         public override IComponent clone(ComponentInfo info)
         {
-<<<<<<< HEAD
             var newControl = new DarkComboBox(info);
-=======
-            var newControl = new DarkComboBox();
->>>>>>> origin/nhhoang_new
+
 
             //set info for newControl
             //....
@@ -49,7 +40,6 @@ namespace LookAndFeel.Controls
             return newControl;
         }
 
-<<<<<<< HEAD
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
@@ -60,19 +50,14 @@ namespace LookAndFeel.Controls
             }
         }
 
-=======
->>>>>>> origin/nhhoang_new
+
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
 
-<<<<<<< HEAD
             Pen pen = new Pen(Color.DarkGray, 4);
 
             e.Graphics.DrawRectangle(pen, 0, 0, this.Width, this.Height);
-=======
-            e.Graphics.DrawRectangle(Pens.DarkGray, 0, 0, this.Width, this.Height);
->>>>>>> origin/nhhoang_new
         }
     }
 }

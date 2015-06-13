@@ -12,7 +12,6 @@ namespace LookAndFeel.Controls
 {
     public abstract class CheckBox : MetroFramework.Controls.MetroCheckBox, IControl
     {
-<<<<<<< HEAD
         protected List<ClickHandler> clickHandlers;
 
         public CheckBox()
@@ -30,10 +29,7 @@ namespace LookAndFeel.Controls
             {
                 this.clickHandlers.Remove(value);
             }
-=======
-        public CheckBox()
-        {
->>>>>>> origin/nhhoang_new
+
         }
 
         /**

@@ -9,21 +9,16 @@ using System.Text;
 
 namespace LookAndFeel.Controls
 {
-<<<<<<< HEAD
     public class DarkLabel : Label
     {
         private ComponentInfo info;
 
-=======
-    public class DarkLabel : Label, IControl
-    {
->>>>>>> origin/nhhoang_new
+
         public DarkLabel()
         {
             
         }
 
-<<<<<<< HEAD
         public DarkLabel(ComponentInfo info)
         {
             // TODO: Complete member initialization
@@ -36,11 +31,6 @@ namespace LookAndFeel.Controls
         public override IComponent clone(ComponentInfo info)
         {
             var newControl = new DarkLabel(info);
-=======
-        public override IComponent clone(ComponentInfo info)
-        {
-            var newControl = new DarkLabel();
->>>>>>> origin/nhhoang_new
 
             //set info for newControl
             //....
@@ -48,7 +38,6 @@ namespace LookAndFeel.Controls
             return newControl;
         }
 
-<<<<<<< HEAD
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
@@ -58,8 +47,7 @@ namespace LookAndFeel.Controls
                 handler(this);
             }
         }
-=======
->>>>>>> origin/nhhoang_new
+
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -67,11 +55,7 @@ namespace LookAndFeel.Controls
             Font font = new System.Drawing.Font("Arial", 9);
             e.Graphics.Clear(Color.Transparent);
             e.Graphics.DrawString(this.Text, font, Brushes.DarkGray, 0, 0);
-<<<<<<< HEAD
-=======
-            
 
->>>>>>> origin/nhhoang_new
         }
     }
 }

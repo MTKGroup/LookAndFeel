@@ -31,6 +31,7 @@ namespace LookAndFeel.Controls
         public DarkButton(ComponentInfo info)
         {
             // TODO: Complete member initialization
+            this.info = new ComponentInfo();
             this.info.x = info.x;
             this.info.y = info.y;
             this.info.width = info.width;

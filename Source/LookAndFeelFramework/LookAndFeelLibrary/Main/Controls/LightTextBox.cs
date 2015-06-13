@@ -32,7 +32,6 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point(18, 7), Color.White);
 
         }
 

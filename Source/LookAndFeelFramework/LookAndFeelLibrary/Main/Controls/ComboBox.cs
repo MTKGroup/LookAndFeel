@@ -12,7 +12,6 @@ namespace LookAndFeel.Controls
 {
     public abstract class ComboBox : MetroFramework.Controls.MetroComboBox, IControl
     {
-<<<<<<< HEAD
         protected List<ClickHandler> clickHandlers;
 
         public ComboBox()
@@ -30,10 +29,7 @@ namespace LookAndFeel.Controls
             {
                 this.clickHandlers.Remove(value);
             }
-=======
-        public ComboBox()
-        {
->>>>>>> origin/nhhoang_new
+
         }
 
         /**

@@ -12,11 +12,8 @@ namespace LookAndFeel.Controls{
      * 
      */
     public abstract class TextBox : MetroFramework.Controls.MetroTextBox, IControl {
-<<<<<<< HEAD
         protected List<ClickHandler> clickHandlers;
-=======
 
->>>>>>> origin/nhhoang_new
         /**
          * 
          */

@@ -10,25 +10,20 @@ using System.Threading.Tasks;
 
 namespace LookAndFeel.Controls
 {
-<<<<<<< HEAD
     public class DarkCheckBox : CheckBox
     {
         private ComponentInfo info;
 
-=======
-    public class DarkCheckBox : CheckBox, IControl
-    {
->>>>>>> origin/nhhoang_new
 
         public DarkCheckBox()
         {
             
         }
 
-<<<<<<< HEAD
         public DarkCheckBox(ComponentInfo info)
         {
             // TODO: Complete member initialization
+            this.info = new ComponentInfo();
             this.info.x = info.x;
             this.info.y = info.y;
             this.info.width = info.width;
@@ -38,11 +33,6 @@ namespace LookAndFeel.Controls
         public override IComponent clone(ComponentInfo info)
         {
             var newControl = new DarkCheckBox(info);
-=======
-        public override IComponent clone(ComponentInfo info)
-        {
-            var newControl = new DarkCheckBox();
->>>>>>> origin/nhhoang_new
 
             //set info for newControl
             //....
@@ -50,7 +40,6 @@ namespace LookAndFeel.Controls
             return newControl;
         }
 
-<<<<<<< HEAD
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
@@ -77,14 +66,7 @@ namespace LookAndFeel.Controls
                                             (int)(this.Height / 2 * 0.8),
                                             (int)(this.Height / 2 * 0.8));
             }
-=======
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
-        {
-            base.OnPaint(e);
 
-            e.Graphics.FillRectangle(Brushes.White, 19, 0, this.Width - 19, this.Height);
-            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 18, 7), Color.DarkGray);
->>>>>>> origin/nhhoang_new
         }
     }
 }
