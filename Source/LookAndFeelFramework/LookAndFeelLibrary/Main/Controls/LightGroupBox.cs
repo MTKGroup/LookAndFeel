@@ -9,23 +9,25 @@ using System.Threading.Tasks;
 
 namespace LookAndFeel.Controls
 {
-    public class DarkGroupBox : GroupBox
+    public class LightGroupBox : GroupBox
     {
         private ComponentInfo info;
 
-        public DarkGroupBox(){
+        public LightGroupBox()
+        {
         }
 
-        public DarkGroupBox(ComponentInfo info) : base(info)
+        public LightGroupBox(ComponentInfo info)
+            : base(info)
         {
             this.Font = new Font("Segoe UI", 11);
         }
 
-        
+
 
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new DarkGroupBox(info);
+            var newControl = new LightGroupBox(info);
 
             //set info for newControl
             //....
@@ -47,15 +49,16 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            Pen pen = new Pen(ForeColor, .5f);
-            int titleHeight = this.Height * 0.2 > 30 ?  30 : (int)(this.Height * 0.2);
-            e.Graphics.Clear(BackColor);
-
-            e.Graphics.DrawRectangle(pen, 0, 0, this.Width-20, this.Height-20);
-            e.Graphics.FillRectangle(new SolidBrush(ForeColor), 0, 0, this.Width - 20, titleHeight);
-
+            Pen pen = new Pen(ForeColor, 1f);
+            int titleHeight = this.Height * 0.2 > 30 ? 30 : (int)(this.Height * 0.2);
             SizeF textSize = e.Graphics.MeasureString(this.Text, this.Font);
-            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point(2, titleHeight/2 - (int)textSize.Height/2), BackColor);
+
+            e.Graphics.Clear(BackColor);
+            e.Graphics.DrawRectangle(pen, 0, (int)textSize.Height / 2, this.Width - 1 - textSize.Height / 2, this.Height - 1 - textSize.Height / 2);
+            //e.Graphics.DrawLine(new Pen(ForeColor), 0, 0, this.Width - 1, 1);
+            //e.Graphics.FillRectangle(new SolidBrush(ForeColor), 0, 0, this.Width - 1, titleHeight);
+
+            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point(2, 0), ForeColor, BackColor);
         }
     }
 }

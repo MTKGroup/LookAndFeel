@@ -12,15 +12,38 @@ namespace LookAndFeel.Controls{
      * 
      */
     public abstract class GroupBox : System.Windows.Forms.GroupBox , IControl {
-        protected HashSet<IControl> controls;
-        protected List<ClickHandler> clickHandlers;
+        protected HashSet<IControl> controls = new HashSet<IControl>();
+        protected List<ClickHandler> clickHandlers = new List<ClickHandler>();
+        protected ComponentInfo info;
         /**
          * 
          */
         public GroupBox() {
-            this.controls = new HashSet<IControl>();
-            this.clickHandlers = new List<ClickHandler>();
         }
+
+        public GroupBox(ComponentInfo info)
+        {
+            this.info = info.clone();
+            this.Top = info.Y;
+            this.Left = info.X;
+            this.Name = this.Text = info.Name;
+            this.Width = info.Width != 0 ? info.Width : this.Width;
+            this.Height = info.Height != 0 ? info.Height : this.Height;
+            info.Width = info.Width != 0 ? info.Width : this.Width;
+            info.Height = info.Height != 0 ? info.Height : this.Height;
+
+            this.ParentChanged += (sender, e) => {
+                                        var parent =  ((GroupBox)sender).Parent;
+                                        if (parent != null) 
+                                        {
+                                            BackColor = parent.BackColor;
+                                            ForeColor = parent.ForeColor;
+                                        }
+                                    };
+        }
+
+
+        
 
         public event ClickHandler ClickListener
         {
@@ -60,6 +83,8 @@ namespace LookAndFeel.Controls{
             this.controls.Add(component);
             this.Controls.Add((System.Windows.Forms.Control)component);
         }
+
+        
 
     }
 }

@@ -114,6 +114,9 @@
     <Compile Include="Main\Controls\LightComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Main\Controls\LightGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Main\Controls\LightLabel.cs">
       <SubType>Component</SubType>
     </Compile>

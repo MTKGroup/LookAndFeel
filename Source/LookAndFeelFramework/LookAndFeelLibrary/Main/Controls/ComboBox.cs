@@ -12,11 +12,23 @@ namespace LookAndFeel.Controls
 {
     public abstract class ComboBox : MetroFramework.Controls.MetroComboBox, IControl
     {
-        protected List<ClickHandler> clickHandlers;
+        protected List<ClickHandler> clickHandlers = new List<ClickHandler>();
+        protected ComponentInfo info;
 
         public ComboBox()
         {
-            this.clickHandlers = new List<ClickHandler>();
+        }
+
+        public ComboBox(ComponentInfo info)
+        {
+            this.info = info.clone();
+            this.Top = info.Y;
+            this.Left = info.X;
+            this.Name = this.Text = info.Name;
+            this.Width = info.Width != 0 ? info.Width : this.Width;
+            this.Height = info.Height != 0 ? info.Height : this.Height;
+            info.Width = info.Width != 0 ? info.Width : this.Width;
+            info.Height = info.Height != 0 ? info.Height : this.Height;
         }
 
         public event ClickHandler ClickListener

@@ -13,12 +13,20 @@ namespace LookAndFeel.Controls
     {
         public LightLabel()
         {
-            this.BackColor = Color.LightBlue;
+            this.Font = new Font("Segoe UI", 9);
+
+        }
+
+        public LightLabel(ComponentInfo info) : base(info)
+        {
+            this.Font = new Font("Segoe UI", 9);
+            ForeColor = Color.FromArgb(150, 40, 27);
+
         }
 
         public override IComponent clone(ComponentInfo info)
         {
-            var newControl = new LightLabel();
+            var newControl = new LightLabel(info);
 
             //set info for newControl
             //....
@@ -31,8 +39,8 @@ namespace LookAndFeel.Controls
             base.OnPaint(e);
 
             Font font = new System.Drawing.Font("Arial", 9);
-            e.Graphics.Clear(Color.LightBlue);
-            e.Graphics.DrawString(this.Text, font, Brushes.White, 0, 0);
+            e.Graphics.Clear(this.Parent.BackColor);
+            e.Graphics.DrawString(this.Text, font, new SolidBrush(ForeColor), 0, 0);
 
 
         }

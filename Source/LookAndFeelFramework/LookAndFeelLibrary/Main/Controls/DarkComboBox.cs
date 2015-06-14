@@ -18,15 +18,11 @@ namespace LookAndFeel.Controls
         {
         }
 
-        public DarkComboBox(ComponentInfo info)
+        public DarkComboBox(ComponentInfo info) : base(info)
         {
-            // TODO: Complete member initialization
-            this.info = new ComponentInfo();
-            this.info.x = info.x;
-            this.info.y = info.y;
-            this.info.width = info.width;
-            this.info.height = info.height;
-
+            UseCustomBackColor = true;
+            BackColor = Color.FromArgb(228, 241, 254);
+            
         }
 
         public override IComponent clone(ComponentInfo info)
@@ -55,9 +51,9 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            Pen pen = new Pen(Color.DarkGray, 4);
+            Pen pen = new Pen(this.Parent.ForeColor, 1);
 
-            e.Graphics.DrawRectangle(pen, 0, 0, this.Width, this.Height);
+            e.Graphics.DrawRectangle(pen, 0, 0, this.Width-1, this.Height-1);
         }
     }
 }

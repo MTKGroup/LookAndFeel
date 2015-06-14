@@ -16,16 +16,14 @@ namespace LookAndFeel.Controls
 
         public DarkLabel()
         {
-            
+            this.Font = new Font("Segoe UI", 9);
+
         }
 
-        public DarkLabel(ComponentInfo info)
+        public DarkLabel(ComponentInfo info) : base(info)
         {
-            // TODO: Complete member initialization
-            this.info.x = info.x;
-            this.info.y = info.y;
-            this.info.width = info.width;
-            this.info.height = info.height;
+            this.Font = new Font("Segoe UI", 9);
+
         }
 
         public override IComponent clone(ComponentInfo info)
@@ -52,9 +50,10 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            Font font = new System.Drawing.Font("Arial", 9);
-            e.Graphics.Clear(Color.Transparent);
-            e.Graphics.DrawString(this.Text, font, Brushes.DarkGray, 0, 0);
+            Font font = this.Font;
+            // System.Windows.Forms.TextRenderer.MeasureText(this.Text, font);
+            e.Graphics.Clear(this.Parent.BackColor);
+            e.Graphics.DrawString(this.Text, font, new SolidBrush(Color.FromArgb(189, 195, 199)), 0, 0);
 
         }
     }

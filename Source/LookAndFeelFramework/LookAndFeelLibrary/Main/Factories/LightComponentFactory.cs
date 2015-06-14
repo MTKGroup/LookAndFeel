@@ -23,6 +23,7 @@ namespace LookAndFeel.Factories{
             this.samples.Add(new LightCheckBox());
             this.samples.Add(new LightComboBox());
             this.samples.Add(new LightTextBox());
+            this.samples.Add(new LightGroupBox());
         }
 
     }

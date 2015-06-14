@@ -17,17 +17,14 @@ namespace LookAndFeel.Controls
 
         public DarkCheckBox()
         {
-            
+            this.Font = new Font("Segoe UI", 8);
+
         }
 
-        public DarkCheckBox(ComponentInfo info)
+        public DarkCheckBox(ComponentInfo info) : base(info)
         {
-            // TODO: Complete member initialization
-            this.info = new ComponentInfo();
-            this.info.x = info.x;
-            this.info.y = info.y;
-            this.info.width = info.width;
-            this.info.height = info.height;
+            this.Font = new Font("Segoe UI", 8);
+
         }
 
         public override IComponent clone(ComponentInfo info)
@@ -53,19 +50,36 @@ namespace LookAndFeel.Controls
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
-            SizeF textSize = e.Graphics.MeasureString(this.Text, this.Font);
-            e.Graphics.FillRectangle(Brushes.White, 0, 0, this.Width, this.Height);
-            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 18, (int)(this.Height/2 - textSize.Height/2)), Color.DarkGray);
+            Color foreColor = this.Parent.ForeColor;
+            Color backColor;
 
-            e.Graphics.DrawRectangle(Pens.Black, 0, this.Height/4, this.Height/2, this.Height/2);
+            if (isHovered)
+                foreColor = Color.FromArgb(
+                            Math.Min((int)(foreColor.R * 1.3f), 255),
+                            Math.Min((int)(foreColor.G * 1.3f), 255),
+                            Math.Min((int)(foreColor.B * 1.3f), 255));
+
+            backColor = Color.FromArgb(
+                                    (int)(foreColor.R * .7f),
+                                    (int)(foreColor.G * .7f),
+                                    (int)(foreColor.B * .7f));
+
+            SizeF textSize = e.Graphics.MeasureString(this.Text, this.Font);
+            e.Graphics.Clear(this.Parent.BackColor);
+            System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point( 14, (int)(this.Height/2 - textSize.Height/2)), foreColor);
+
+            e.Graphics.DrawRectangle(new Pen(backColor), 0, this.Height / 4 - 1, this.Height / 2, this.Height / 2);
             if (this.Checked)
             {
-                e.Graphics.FillRectangle(Brushes.DarkGray,
+                e.Graphics.FillRectangle(new SolidBrush(backColor),
                                             (int)(this.Height / 4 * 0.4),
-                                            (int)(this.Height / 4 *1.4),
+                                            (int)(this.Height / 4 *1.4 -1),
                                             (int)(this.Height / 2 * 0.8),
                                             (int)(this.Height / 2 * 0.8));
             }
+
+            
+
 
         }
     }

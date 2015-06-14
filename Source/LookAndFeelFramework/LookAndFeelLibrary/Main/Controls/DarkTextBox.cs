@@ -11,25 +11,22 @@ namespace LookAndFeel.Controls
 {
     public class DarkTextBox : TextBox
     {
-        private ComponentInfo info;
 
         public DarkTextBox()
         {
-            this.Width = 100;
-            this.ForeColor = Color.DarkGray;
+
+
         }
 
-        public DarkTextBox(ComponentInfo info)
+        public DarkTextBox(ComponentInfo info) : base(info)
         {
-            // TODO: Complete member initialization
-            this.info = new ComponentInfo();
-            this.info.x = info.x;
-            this.info.y = info.y;
-            this.info.width = info.width;
-            this.info.height = info.height;
-
-            this.Width = 100;
-            this.ForeColor = Color.DarkGray;
+            BackColor = Color.FromArgb(228, 241, 254); 
+            ForeColor = Color.Red;
+            FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            UseCustomBackColor = true;
+            UseCustomForeColor = true;
+            Style = MetroFramework.MetroColorStyle.White;
+            this.ForeColor = Color.FromArgb(34, 49, 63);
         }
 
         public override IComponent clone(ComponentInfo info)
@@ -58,10 +55,7 @@ namespace LookAndFeel.Controls
         {
             base.OnPaint(e);
 
-            
 
-            Pen pen = new Pen(Color.DarkGray, 4);
-            e.Graphics.DrawRectangle(pen, 0, 0, this.Width, this.Height);
         }
 
 
@@ -79,9 +73,10 @@ namespace LookAndFeel.Controls
 
         protected override void OnForeColorChanged(EventArgs e)
         {
-            base.OnForeColorChanged(e);
-            this.ForeColor = Color.DarkGray;
+            base.OnForeColorChanged(e);  
 
         }
+
+       
     }
 }
