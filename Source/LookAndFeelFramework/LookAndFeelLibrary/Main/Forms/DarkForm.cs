@@ -18,69 +18,36 @@ namespace LookAndFeel.Forms{
          * 
          */
         public DarkForm() {
-            this.BackColor = Color.Black;
-
+            this.backColor = Color.FromArgb(255, 34, 49, 63);
+            this.foreColor = Color.FromArgb(189, 195, 199);
+            this.lineColor = Color.FromArgb(89, 171, 227);
             
+        }
+
+        public DarkForm(ComponentInfo info)
+            : base(info)
+        {
+            this.backColor = Color.FromArgb(255, 34, 49, 63);
+            this.foreColor = Color.FromArgb(189, 195, 199);
+            this.lineColor = Color.FromArgb(89, 171, 227);
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
 
+
             //cheat window button
             //List<System.Windows.Forms.Button> btns = new List<System.Windows.Forms.Button>();
-            foreach (System.Windows.Forms.Control b in this.Controls)
-            {
-
-                if (b.GetType().Name.Equals("MetroFormButton"))
-                {
-
-                    var g = b.CreateGraphics();
-                    g.Clear(Color.Transparent);
-                    
-
-                }
-
-
-
-                //Console.WriteLine(b.GetType().Name);
-            }
-        }
-
-        void b_Invalidated(object sender, System.Windows.Forms.InvalidateEventArgs e)
-        {
-            var g = ((System.Windows.Forms.Control)sender).CreateGraphics();
-            g.Clear(Color.Transparent);
             
-        }
-
-
-        protected override void OnPaintBackground(System.Windows.Forms.PaintEventArgs e)
-        {
-            base.OnPaintBackground(e);
-
-        }
-
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
-        {
-            base.OnPaint(e);
-
-            e.Graphics.Clear(Color.FromArgb(0, 255, 1, 1));
-            //Pen p = new Pen(Color.Fuchsia, 8);
-            //g.DrawLine(p, 0, 0, Width, 0);
-
-           
-
-        }
-
-        
+        }     
 
         /**
          * @return
          */
         public override IComponent clone(ComponentInfo info)
         {
-            return new DarkForm();
+            return new DarkForm(info);
         }
 
     }

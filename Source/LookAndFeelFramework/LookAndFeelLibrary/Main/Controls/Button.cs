@@ -14,10 +14,29 @@ namespace LookAndFeel.Controls{
     public abstract class Button : MetroFramework.Controls.MetroButton, IControl {
         protected bool isHovered;
         protected bool isPressed;
+        protected List<ClickHandler> clickHandlers = new List<ClickHandler>();
+        protected ComponentInfo info;
+
         /**
          * 
          */
         public Button() {
+            info = new ComponentInfo();
+        }
+
+        public Button(ComponentInfo info)
+        {
+            // TODO: Complete member initialization
+            this.info   = info.clone();
+            this.Top    = info.Y;
+            this.Left   = info.X;         
+            this.Name   = this.Text = info.Name;
+            this.Width  = info.Width    != 0 ? info.Width   : this.Width;
+            this.Height = info.Height   != 0 ? info.Height  : this.Height;
+            info.Width  = info.Width    != 0 ? info.Width   : this.Width;
+            info.Height = info.Height   != 0 ? info.Height  : this.Height;
+
+
         }
 
         /**
@@ -37,9 +56,20 @@ namespace LookAndFeel.Controls{
          * @return
          */
         public IComponent convert(ComponentFactory f) {
-            var info = new ComponentInfo();
-            return f.create(this.getType(), info);    
+            return f.create(this.getType(), this.info);    
         }
+
+        public event ClickHandler ClickListener 
+        { 
+            add{
+                this.clickHandlers.Add(value);
+            }
+            remove {
+                this.clickHandlers.Remove(value);
+            }
+        }
+
+        
 
         protected override void OnMouseDown(System.Windows.Forms.MouseEventArgs e)
         {
@@ -65,6 +95,20 @@ namespace LookAndFeel.Controls{
             base.OnMouseLeave(e);
             isHovered = false;
         }
+
+        public override string Text
+        {
+            get
+            {
+                return base.Text;
+            }
+            set
+            {
+                this.Name = value;
+                base.Text = value;
+            }
+        }
+
 
     }
 }

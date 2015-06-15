@@ -1,0 +1,35 @@
+public void xu_ly_su_kien_click()
+{
+	//client cai dat
+}
+
+void main(){
+	var button = new Button();
+
+	//cach 2
+	button.ClickListen += xu_ly_su_kien_click;
+
+	//cach 1
+	button.registerOnClick( xu_ly_su_kien_click );
+}
+
+
+
+class Button{
+	
+	public delegate void ClickHandler(object sender);
+
+	// cach 2
+	public event ClickHandler ClickListener;
+
+	//cach 1
+	public void reigsterOnClick( ClickHandler handler  );
+
+	//Hethong
+	Override OnClick(){
+
+		ClickListener(this);
+	}
+
+
+}
