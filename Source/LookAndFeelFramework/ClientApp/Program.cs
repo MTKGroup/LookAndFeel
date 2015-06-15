@@ -20,6 +20,7 @@ namespace ClientApp
         static LookAndFeel.Forms.Form form;
         static LookAndFeel.Controls.TextBox textbox1, textbox2;
         static LookAndFeel.Controls.Label labNotification;
+        private static LookAndFeel.Controls.CheckBox checkbox;
 
         [STAThread]
         static void Main()
@@ -36,7 +37,14 @@ namespace ClientApp
             //Form
             info = new ComponentInfo(0, 0, 350, 550, "Demo");
             form = (LookAndFeel.Forms.Form)factory.create("Form", info);
-            
+            form.FormClosing += (sender, e) =>
+                                    {
+                                        if (!Settings.Default.Remember) return;
+                                        Settings.Default.Username = textbox1.Text;
+                                        Settings.Default.Password = textbox2.Text;
+                                        Settings.Default.Save();
+                                    };
+
 
             //Label username
             info = new ComponentInfo(20, 50, 0, 0, "Username");
@@ -45,6 +53,7 @@ namespace ClientApp
             //Textbox username
             info = new ComponentInfo(20, 75, 150, 25, "");
             textbox1 = (LookAndFeel.Controls.TextBox)factory.create("TextBox", info);
+            
 
             //Label password
             info = new ComponentInfo(20, 120, 0, 0, "Password");
@@ -57,7 +66,13 @@ namespace ClientApp
 
             //Checkbox remember
             info = new ComponentInfo(20, 190, 0, 0, "Remember");
-            var checkbox = (LookAndFeel.Controls.CheckBox)factory.create("CheckBox", info);
+            checkbox = (LookAndFeel.Controls.CheckBox)factory.create("CheckBox", info);
+            checkbox.ClickListener += (sender) =>
+                                        {
+                                            var cbo = sender as LookAndFeel.Controls.CheckBox;
+                                            Settings.Default.Remember = cbo.Checked;
+                                            Settings.Default.Save();
+                                        };
 
             //Button login
             info = new ComponentInfo(20, 240, 100, 0, "Login");
@@ -103,13 +118,26 @@ namespace ClientApp
 
             form.Text = "Demo";
 
+            //Load textbox
+            loadTextboxData();
+
 
             //form = (LookAndFeel.Forms.Form)form.convert(new LightComponentFactory());
             //form = (LookAndFeel.Forms.Form)form.convert(new DarkComponentFactory());
             Application.Run(form);
 
+           
 
+        }
 
+        private static void loadTextboxData()
+        {
+            if (Settings.Default.Remember)
+            {
+                textbox1.Text = Settings.Default.Username;
+                textbox2.Text = Settings.Default.Password;
+                checkbox.Checked = true;
+            }
         }
 
         static void combobox_SelectedIndexChanged(object sender, EventArgs e)

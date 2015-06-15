@@ -51,8 +51,8 @@ namespace LookAndFeel.Controls
             int titleHeight = this.Height * 0.2 > 30 ?  30 : (int)(this.Height * 0.2);
             e.Graphics.Clear(BackColor);
 
-            e.Graphics.DrawRectangle(pen, 0, 0, this.Width-20, this.Height-20);
-            e.Graphics.FillRectangle(new SolidBrush(ForeColor), 0, 0, this.Width - 20, titleHeight);
+            e.Graphics.DrawRectangle(pen, 0, 0, this.Width-1, this.Height-1);
+            e.Graphics.FillRectangle(new SolidBrush(ForeColor), 0, 0, this.Width - 1, titleHeight);
 
             SizeF textSize = e.Graphics.MeasureString(this.Text, this.Font);
             System.Windows.Forms.TextRenderer.DrawText(e.Graphics, this.Text, this.Font, new Point(2, titleHeight/2 - (int)textSize.Height/2), BackColor);

@@ -11,6 +11,7 @@ namespace LookAndFeel.Controls
 {
     public class LightTextBox : TextBox
     {
+        private bool focused;
 
         public LightTextBox()
         {
@@ -26,6 +27,9 @@ namespace LookAndFeel.Controls
             UseCustomBackColor = true;
             UseCustomForeColor = true;
             Style = MetroFramework.MetroColorStyle.Black;
+
+            
+
         }
 
         public override IComponent clone(ComponentInfo info)
@@ -39,6 +43,25 @@ namespace LookAndFeel.Controls
             return newControl;
         }
 
+
+        protected override void OnEnter(EventArgs e)
+        {
+            base.OnEnter(e);
+
+            this.focused = true;
+            Invalidate();
+        }
+
+        protected override void OnLeave(EventArgs e)
+        {
+            base.OnLeave(e);
+
+            this.focused = false;
+            Invalidate();
+        }
+
+        
+     
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
@@ -47,14 +70,36 @@ namespace LookAndFeel.Controls
             {
                 handler(this);
             }
+
+            
         }
 
+        
 
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
+            int lineWidth = 1;
 
-            e.Graphics.DrawRectangle(new Pen(this.Parent.ForeColor), 0, 0, this.Width - 1, this.Height - 1);
+            if (focused)
+            {
+                lineWidth = 2;
+            }
+
+            Pen pen = new Pen(this.Parent.ForeColor, lineWidth);
+            Pen clearPen = new Pen(this.Parent.BackColor);
+
+            
+
+            e.Graphics.DrawRectangle(clearPen, 
+                                0, 
+                                0, 
+                                this.Width - 1, 
+                                this.Height - 1);
+             
+            e.Graphics.DrawLine(pen, 0, this.Height - 1, this.Width, this.Height - 1);
+            e.Graphics.DrawLine(pen, 0, this.Height - 1, 0, this.Height * .7f);
+            e.Graphics.DrawLine(pen, this.Width - 1, this.Height - 1, this.Width - 1, this.Height * .7f);
         }
 
 

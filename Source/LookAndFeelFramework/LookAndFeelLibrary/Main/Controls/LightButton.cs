@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Timers;
+using System.Threading;
+
 
 namespace LookAndFeel.Controls
 {
@@ -14,6 +17,12 @@ namespace LookAndFeel.Controls
      */
     public class LightButton : Button
     {
+        System.Timers.Timer timer = new System.Timers.Timer();
+        private DateTime backupTime;
+        System.Threading.Thread thread;
+        private double pressedTime = 0;
+        private double TotalTime = 700;
+        private bool isWorking = false;
         /**
          * 
          */
@@ -34,6 +43,41 @@ namespace LookAndFeel.Controls
 
             this.Font = new Font("Segoe UI", 8);
             SetStyle(System.Windows.Forms.ControlStyles.StandardClick | System.Windows.Forms.ControlStyles.StandardDoubleClick, true);
+
+ 
+
+             thread = new System.Threading.Thread(
+                                                    () => {
+                                                    abc:
+                                                        if (!isWorking) goto abc;
+                                                        
+                                                        var distance = (DateTime.Now - backupTime).TotalMilliseconds;
+                                                        if (distance >= 1000 / 60 &&
+                                                            MouseButtons != System.Windows.Forms.MouseButtons.None
+                                                            && pressedTime < TotalTime)
+                                                        {
+                                                            pressedTime += distance;
+                                                            Invalidate();
+                                                            backupTime = DateTime.Now;
+                                                            
+                                                        }
+                                                        else if (pressedTime >= TotalTime)
+                                                        {
+                                                            isWorking = false;
+                                                            this.Invoke((System.Windows.Forms.MethodInvoker)(()=>{
+                                                                foreach (var h in clickHandlers)
+                                                                {
+                                                                    h(this);
+                                                                }
+                                                            }));
+
+                                                        }
+
+                                                        goto abc;
+                                                        
+                                                    }, 0);
+             thread.Start();
+              
         }
 
         public override IComponent clone(ComponentInfo info)
@@ -47,26 +91,29 @@ namespace LookAndFeel.Controls
 
         }
 
-        protected override void OnDoubleClick(EventArgs e)
+
+
+        protected override void OnMouseDown(System.Windows.Forms.MouseEventArgs e)
         {
+            base.OnMouseDown(e);
+
+            backupTime = DateTime.Now;
+            pressedTime = 0;
+            isWorking = true;
+
             
-            base.OnDoubleClick(e);
-
-            foreach (var handler in this.clickHandlers)
-            {
-                handler(this);
-            }
         }
-        protected override void OnMouseClick(System.Windows.Forms.MouseEventArgs e)
+
+        protected override void OnMouseUp(System.Windows.Forms.MouseEventArgs e)
         {
-            base.OnMouseClick(e);
-
-            if (e.Clicks >= 2)
-                foreach (var handler in this.clickHandlers)
-                {
-                    handler(this);
-                }
+            base.OnMouseUp(e);
+            isWorking = false;
+            pressedTime = 0;
+            Invalidate();
+     
         }
+
+
 
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
@@ -106,6 +153,22 @@ namespace LookAndFeel.Controls
                     e.Graphics.Clear(backColor);
                 }
 
+                //Draw percent
+                if (MouseButtons != System.Windows.Forms.MouseButtons.None && pressedTime > 0)
+                {
+                    backColor = Color.FromArgb(255, 246, 237);
+                    var percentColor = Color.FromArgb(
+                                        (int)(backColor.R * .7f),
+                                        (int)(backColor.G * .7f),
+                                        (int)(backColor.B * .7f));
+                    percentColor = Color.FromArgb(255 , 146,  142);
+                    e.Graphics.FillRectangle(new SolidBrush(percentColor), 0, 0,
+                                            (float)this.pressedTime / (float)this.TotalTime * (this.Width - 1),
+                                            this.Height);
+                }
+                
+
+
                 e.Graphics.DrawRectangle(new Pen(borderColor), 0, 0, this.Width - 1, this.Height - 1);
 
                 System.Windows.Forms.TextRenderer.DrawText(e.Graphics,
@@ -114,7 +177,7 @@ namespace LookAndFeel.Controls
                         foreColor,
                         Color.Transparent,
                         System.Windows.Forms.TextFormatFlags.HorizontalCenter | System.Windows.Forms.TextFormatFlags.VerticalCenter);
-
+                
             }
             catch
             {
@@ -125,6 +188,18 @@ namespace LookAndFeel.Controls
         protected override void OnPaintBackground(System.Windows.Forms.PaintEventArgs e)
         {
 
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+            if (thread != null && thread.ThreadState == ThreadState.Running)
+            {
+
+                thread.Abort();
+            }
+            
+            
         }
     }
 }
