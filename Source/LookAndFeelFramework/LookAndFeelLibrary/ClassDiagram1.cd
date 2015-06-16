@@ -32,37 +32,37 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LookAndFeel.Controls.DarkButton" Collapsed="true">
-    <Position X="2" Y="9" Width="1.5" />
+    <Position X="1.25" Y="9" Width="2" />
     <TypeIdentifier>
-      <HashCode>AQCAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AQCAAAAAAAAAAAAAAAAAAAACAAAAAAAAQAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkButton.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LookAndFeel.Controls.DarkComboBox" Collapsed="true">
     <Position X="9.5" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAQAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkComboBox.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LookAndFeel.Controls.DarkCheckBox" Collapsed="true">
     <Position X="5.5" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAQAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkCheckBox.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LookAndFeel.Controls.DarkLabel" Collapsed="true">
     <Position X="3.75" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAQAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkLabel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LookAndFeel.Controls.DarkTextBox" Collapsed="true">
     <Position X="7.5" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IQCAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>IQCAAAAAAAAAAAAAAAAAAEACAAAAAAAAQAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkTextBox.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -137,7 +137,7 @@
   <Class Name="LookAndFeel.Controls.DarkGroupBox" Collapsed="true">
     <Position X="12" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAACAAAAAAAAQAAAEAAAAAA=</HashCode>
       <FileName>Main\Controls\DarkGroupBox.cs</FileName>
     </TypeIdentifier>
   </Class>
